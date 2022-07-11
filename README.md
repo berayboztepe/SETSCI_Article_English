@@ -43,7 +43,7 @@ In order to create the structures and models designed in our study, ten sound ca
   Keras [12] library was used to create all deep learning models. In addition, pre-trained ResNet50 [13], MobileNetV2 [14], VGG16 and VGG19 [15] models, which are ready in the Keras library and used as the base model of the given model, were used. The creation of the model is based on the spectrogram of the available audio recording with the help of both the Librosa [8] and Tensorflow [16] libraries. These spectrograms were created by taking log-mel properties. Then, with the help of these libraries, data augmentation was provided programmatically for the available data set. The SoundNet [17], [18] library, which provides direct decomposition of sounds over the given input video, has also been tested. With the help of the Matplotlib [19] library, the generated spectrograms were turned into a graph. Also Numpy [19], Pandas [19], OS [19] etc. libraries were also used. During the trainings and tests, one of them is Intel Core i7-8750H processor with 16 GB RAM memory, running at 2.20 GHz, Nvidia GeForce GTX 1060 graphics card hardware features, and the other is Intel Core i7-9750H processor with 8 GB RAM memory, running at 2.6 GHz and Two different laptop computers with Nvidia GeForce GTX 1650 graphics card hardware features were used. Figure 1 shows some examples of spectrograms used in our study.
   
 <p align="center">
-<img src="img/image2.png" width="600" height="50">
+<img src="img/image2.png">
 </p>
 
 <p align="center"> <strong> V. Used Libraries and Environment for Developing the Model </strong> </p>
@@ -90,7 +90,7 @@ Chroma-type feature acquisition method with the help of Librosa [8] library was 
 In order to increase the data in the dataset, spectrogram was taken with the help of Tensorflow [16] library, which is another method, and Multiple Masking [11] was applied. The Multiple Masking process [22] expands the training distribution by plotting the shear plane from random parts of a spectrogram according to the given parameters to increase and mix the data. Frequency mask parameter 36, time mask parameter 24 is taken. These values have been chosen because the most appropriate masks are created. For each given spectrogram, 2 frequency and 2 time masks were created. First of all, some of the sounds were cut and new data were obtained by mixing the sounds in the common category. For example, the data set has been increased with the new data created by combining the "Breathing" and "Tooth Brushing" sounds in the category of "Sounds Not Containing Human Speech". While creating this model, a study in the literature was used, in which the model created using this method was used before [23]. Multiple Masking process is applied to only the spectrograms obtained at the beginning were used to the dataset, MFCC [6] and Chroma [7] type feature acquisition method are not been used and the model was trained. In our study, this structure, examples of which can be seen in Figure 2, was named "Design4".
 
 <p align="center">
-<img src="img/image3.png" width="600" height="50">
+<img src="img/image3.png">
 </p>
  
 <p align="center"> <strong> X. Data Given to the Programatically Created Model </strong> </p>
