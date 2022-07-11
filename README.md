@@ -335,7 +335,7 @@ It is understood that the implementations of the new design models designed in o
 
 <p align="center"> <strong> References </strong> </p>
 
--[1] B., Karasulu. “Çoklu Ortam Sistemleri İçin Siber Güvenlik
+- [1] B., Karasulu. “Çoklu Ortam Sistemleri İçin Siber Güvenlik
 Kapsamında Derin Öğrenme Kullanarak Ses Sahne ve Olaylarının
 Tespiti” ACTA INFOLOGICA, 3(2):60-82, 2019. doi:
 10.26650/acin.590690
