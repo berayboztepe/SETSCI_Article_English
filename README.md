@@ -19,6 +19,6 @@ contains obtained experimental results and scientific evaluation.
 
 **Keywords** --- Convolutional Neural Networks, Recurrent Neural Networks, Environmental Sound Recognition
 
-<p align="center" style="bold"> I. Introduction </p>
+<p align="center"> <strong> I. Introduction </strong> </p>
 
   Sound Recognition, which emerged with the development of technology, is a technology based on the analysis of the audio signal. This process can be performed using Deep Learning methods like many other methods. To these methods; Methods such as creating Convolutional Neural Networks (CNN) by creating a spectrogram, and establishing Recurrent Neural Networks (RNN) using Time Series can be given as examples.
