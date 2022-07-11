@@ -339,72 +339,96 @@ It is understood that the implementations of the new design models designed in o
 Kapsamında Derin Öğrenme Kullanarak Ses Sahne ve Olaylarının
 Tespiti” ACTA INFOLOGICA, 3(2):60-82, 2019. doi:
 10.26650/acin.590690
+
 -[2] K. J. Piczak, “Environmental sound classification with convolutional
 neural networks”, 2015 IEEE 25th International Workshop on
 Machine Learning for Signal Processing (MLSP), Boston, MA, USA
 pp. 1-6. 2015. doi: 10.1109/MLSP.2015.7324337
+
 -[3] L., Shaobo, Y., Yao, J., Hu, G., Liu, X. Yao, and J., Hu. “An
 ensemble stacked convolutional neural network model for
 environmental event sound recognition”, Applied Sciences, vol. 8, no.
 7 (2018): 1152. 2018. doi: 10.3390/app8071152
+
 -[4] A., Khamparia, D., Gupta, N.G., Nguyen, A., Khanna, B., Pandey and
 P., Tiwari, “Sound Classification Using Convolutional Neural
 Network and Tensor Deep Stacking Network”, IEEE Access, vol. 7,
 pp. 7717-7727, 2019. doi: 10.1109/ACCESS.2018.2888882
+
 -[5] A. Krizhevsky, I. Sutskever, G.E. Hinton. “ImageNet Classification
 with Deep Convolutional Neural Networks”, Advances in Neural
 Information Processing Systems, Editörler: F. Pereira and C.J. Burges
 and L. Bottou and K.Q. Weinberger, Curran Associates, Inc., Vol. 25,
 2012. [Online]: https://proceedings.neurips.cc/paper/2012/file/
 c399862d3b9d6b76c8436e924a68c45b-Paper.pdf
+
 -[6] MFCC (Mel-frequency cepstral coefficient) dokümantasyonu, 2022.
 https://librosa.org/doc/main/generated/librosa.feature.mfcc.html
+
 -[7] Chroma ses özniteliği dokümantasyonu, 2022. [Online].
 https://librosa.org/doc/main/generated/librosa.feature.chroma_stft.ht
 ml
+
 -[8] B. McFee, C. Raffel, D. Liang, D.P. Ellis, M. McVicar, E. Battenberg
 and O. Nieto. "librosa: Audio and Music Signal Analysis in Python",
 In Proceedings of the 14th Python in Science Conference, volume 8,
 2015. doi: 10.25080/Majora-7b98e3ed-003
+
 -[9] N., Marwan, M., Thiel, N.R. and Nowaczyk. “Cross Recurrence Plot
 Based Synchronization of Time Series”. In: Nonlinear Processes in
 Geophysics 9 (2002), 325-331. 2002.
+
 -[10] ESC-50 veri kümesi, 2022. [Online].
 https://github.com/karolpiczak/ESC-50
+
 -[11] Çoklu Maskeleme işlemi dokümantasyonu, 2022. [Online].
 https://www.tensorflow.org/io/tutorials/audio
+
 -[12] Keras Kütüphanesi dokümantasyonu, 2022. [Online]. https://keras.io
+
 -[13] ResNet50 sinir ağı modeli dokümantasyonu, 2022. [Online].
 https://keras.io/api/applications/resnet/#resnet50-function
+
 -[14] MobileNetV2 sinir ağı modeli dokümantasyonu, 2022. [Online].
 https://keras.io/api/applications/mobilenet/#mobilenetv2-function
+
 -[15] VGG16 ve VGG19 sinir ağı modelleri dokümantasyonu, 2022.
 [Online]. https://keras.io/api/applications/vgg/#vgg16-function
+
 -[16] Tensorflow kütüphanesi dokümantasyonu, 2022. [Online].
 https://www.tensorflow.org/api_docs
+
 -[17] Y., Aytar, C., Vondrick, A., Torralba. “SoundNet: Learning Sound
 Representations from Unlabeled Video “. arXiv preprint arXiv :
 1610.09001v1 [cs.CV] 2016
+
 -[18] SoundNet kütüphanesinin Github İnternet Erişim Adresi, 2022,
 [Online]. https://github.com/JarbasAl/soundnet
+
 -[19] Altyapıda kullanılan çeşitli kütüphanelerin dokümantasyonları, 2022.
 [Online]. https://pypi.org
+
 -[20] DCASE (Detection and Classification of Acoustic Scenes and
 Events) veri kümesi, 2022. [Online]. http://dcase.community
+
 -[21] Kesit alınan bilgisayar oyununun oynanış videosu, 2022. [Online].
 https://www.youtube.com/watch?v=d74REG039Dk
+
 -[22] D.S., Park, W., Chan., Y., Zhang, C.-C., Chiu, B., Zoph, E.D., Cubuk
 and Q.V., Le. “SpecAugment: A Simple Data Augmentation Method
 for Automatic Speech Recognition”. arXiv preprint:
 arXiv:1904.08779v3 [eess.AS]. 2019
+
 -[23] J. You and J. Korhonen. "Attention Boosted Deep Networks For
 Video Classification", 2020 IEEE International Conference on Image
 Processing (ICIP), 2020, pp. 1761-1765. doi:
 10.1109/ICIP40778.2020.9190996
+
 -[24] Z., Zhang, S., Xu, S., Zhang, T., Qiao and S., Cao. "Learning
 Attentive Representations for Environmental Sound Classification",
 IEEE Access, vol. 7, pp. 130327-130339, 2019. doi:
 10.1109/ACCESS.2019.2939495
+
 -[25] B., Karasulu. “Kısıtlanmış Boltzmann makinesi ve farklı
 sınıflandırıcılarla oluşturulan sınıflandırma iş hatlarının başarımının
 değerlendirilmesi”, Bilişim Teknolojileri Dergisi, 11(3), 223-233,
