@@ -241,6 +241,41 @@ _Table 5. Obtained accuracy and loss values from generated models._
     <th> Accuracy Rate </th>
     <th> Training Loss Value </th>
   </tr>
+  <tr>
+    <td> Design1 </td>
+    <td> 0,60 </td>
+    <td> 1,37 </td>
+  </tr>
+  <tr>
+    <td> Design2 </td>
+    <td> 0,74 </td>
+    <td> 1,73 </td>
+  </tr>
+  <tr>
+    <td> Design3 </td>
+    <td> 0,59 </td>
+    <td> 1,08 </td>
+  </tr>
+  <tr>
+    <td> Design4 </td>
+    <td> 0,71 </td>
+    <td> 0,81 </td>
+  </tr>
+  <tr>
+    <td> Design5 </td>
+    <td> 0,73 </td>
+    <td> 1,24 </td>
+  </tr>
+  <tr>
+    <td> Design6 </td>
+    <td> 0,87 </td>
+    <td> 0,88 </td>
+  </tr>
+  <tr>
+    <td> Design7 </td>
+    <td> 0,42 </td>
+    <td> 1,82 </td>
+  </tr>
   </table>
 
 
