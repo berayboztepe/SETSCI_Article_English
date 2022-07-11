@@ -44,6 +44,8 @@ In order to create the structures and models designed in our study, ten sound ca
 <p align="center"> <strong> IV. Used Libraries and Environment for Developing the Model </strong> </p>
 
   Keras [12] library was used to create all deep learning models. In addition, pre-trained ResNet50 [13], MobileNetV2 [14], VGG16 and VGG19 [15] models, which are ready in the Keras library and used as the base model of the given model, were used. The creation of the model is based on the spectrogram of the available audio recording with the help of both the Librosa [8] and Tensorflow [16] libraries. These spectrograms were created by taking log-mel properties. Then, with the help of these libraries, data augmentation was provided programmatically for the available data set. The SoundNet [17], [18] library, which provides direct decomposition of sounds over the given input video, has also been tested. With the help of the Matplotlib [19] library, the generated spectrograms were turned into a graph. Also Numpy [19], Pandas [19], OS [19] etc. libraries were also used. During the trainings and tests, one of them is Intel Core i7-8750H processor with 16 GB RAM memory, running at 2.20 GHz, Nvidia GeForce GTX 1060 graphics card hardware features, and the other is Intel Core i7-9750H processor with 8 GB RAM memory, running at 2.6 GHz and Two different laptop computers with Nvidia GeForce GTX 1650 graphics card hardware features were used. Figure 1 shows some examples of spectrograms used in our study.
+  
+ BURAYA RESİM!!!!!!
 
 <p align="center"> <strong> V. Used Libraries and Environment for Developing the Model </strong> </p>
 
@@ -70,8 +72,58 @@ The dataset was converted into a spectrogram using the method available in the L
   </tr>
 </table>
 
+<p align="center"> <strong> VI. Result Obtained with Using SoundNet </strong> </p>
 
+SoundNet model and its library is a ready-made voice recognition model in the literature created using [17], [18], Environmental Sound Classification-50 dataset (ESC-50) [10] and Detection and Classification of Acoustic Scenes and Events dataset (DCASE)  [20]. In order to be given to this model, a three-minute section was taken from the gameplay video [21] of a computer game with environmental sounds and given to this model. However, the estimate obtained was not satisfactory. For example, in a part of the video: 43% probability of being in a television studio, 12% probability of being in an aquarium, 24% of skiing were estimated, but none of these events took place in that part. Only predictions could be made to describe accurate environmental scenes in certain parts. For this reason, as mentioned here, the SoundNet infrastructure was also examined and evaluated experimentally so that the model we developed could obtain more reliable estimation results.
 
+<p align="center"> <strong> VII. Incresing the Dataset by Obtaining MFCC-Type Features </strong> </p>
 
+Since the available dataset is limited, increasing the feature set will enable the model to give better experimental results. For this reason, in order to increase the feature set, the MFCC type sound features acquisition method was applied to the audio segments in the form of spectrogram images with the help of the Librosa [8] library and the feature set was increased. Later, the same design and the MobileNetV2 [14] neural network model were used. In our study, this structure was named "Design2".
 
+<p align="center"> <strong> VIII. Increase the Attribute Set by Using Sound Attributes Together </strong> </p>
+
+Chroma-type feature acquisition method with the help of Librosa [8] library was applied to the sounds in the dataset, which is another method to increase the feature types in the dataset, and it was added to the existing data previously created by the MFCC type feature acquisition method. The new model was trained with the increased data. In our study, this structure was named "Design3".
+
+<p align="center"> <strong> IX. Obtained Model with Using Multiple Masking </strong> </p>
+
+In order to increase the data in the dataset, spectrogram was taken with the help of Tensorflow [16] library, which is another method, and Multiple Masking [11] was applied. The Multiple Masking process [22] expands the training distribution by plotting the shear plane from random parts of a spectrogram according to the given parameters to increase and mix the data. Frequency mask parameter 36, time mask parameter 24 is taken. These values have been chosen because the most appropriate masks are created. For each given spectrogram, 2 frequency and 2 time masks were created. First of all, some of the sounds were cut and new data were obtained by mixing the sounds in the common category. For example, the data set has been increased with the new data created by combining the "Breathing" and "Tooth Brushing" sounds in the category of "Sounds Not Containing Human Speech". While creating this model, a study in the literature was used, in which the model created using this method was used before [23]. Multiple Masking process is applied to only the spectrograms obtained at the beginning were used to the dataset, MFCC [6] and Chroma [7] type feature acquisition method are not been used and the model was trained. In our study, this structure, examples of which can be seen in Figure 2, was named "Design4".
+
+ BURAYA RESİM!!!!!!
+ 
+<p align="center"> <strong> X. Data Given to the Programatically Created Model </strong> </p>
+
+The programmatic implementation of the design model, which was developed based on the model [24] in a study in the literature, works as follows, thanks to its coding in Python language. First, a CNN model with four Convolutional Layers is created. Batch Normalization is done after each Convolutional Layer is created. A Pooling operation takes place in both Convolutional Layers. In the models in our study, the relevant activation processes are also performed using the Rectified Linear Unit (ReLU). After the last Pooling process, a model is created for two Gated Recurrent Units (KTB) with hyperbolic tangent (tanh) activation. After the Dropout process, the “Softmax” process is performed and the classification result is obtained. The dataset given to this programmatic structure is the same as the dataset mentioned in the previous section. In our study, this model seen in Table 2 was named "Design5".
+
+<table>
+  <tr>
+    <th> Convolutional RNN </th>
+  </tr>
+  <tr>
+    <td> 3x5x32 Convolutional1-Batch Normalization-ReLU </td>
+  </tr>
+  <tr>
+    <td> 3x5x32 Convolutional2-Batch Normalization-ReLU </td>
+  </tr>
+  <tr>
+    <td> 4x3 MaxPooling </td>
+  </tr>
+  <tr>
+    <td> 3x1x64 Convolutional3-Batch Normalization-ReLU </td>
+  </tr>
+  <tr>
+    <td> 3x1x64 Convolutional4-Batch Normalization-ReLU </td>
+  </tr>
+  <tr>
+    <td> 4x1 MaxPooling </td>
+  </tr>
+  <tr>
+    <td> 256 GRU1-tanh-Dropout 0.5 </td>
+  </tr>
+  <tr>
+    <td> 256 GRU2-tanh-Dropout 0.5 </td>
+  </tr>
+  <tr>
+    <td> 10 Dense- Softmax </td>
+  </tr>
+</table>
 
