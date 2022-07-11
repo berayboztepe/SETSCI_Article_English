@@ -234,8 +234,12 @@ _Table 5. Obtained accuracy and loss values from generated models._
 
 <table>
   <tr>
-    <th  rowspan="2"> Model </th>
-    <th> Obtained Results from Experiments </th>
+    <th  colspan="3"> Obtained Results from Experiments </th>
+  </tr>
+  <tr>
+    <th> Model </th>
+    <th> Accuracy Rate </th>
+    <th> Training Loss Value </th>
   </tr>
   </table>
 
