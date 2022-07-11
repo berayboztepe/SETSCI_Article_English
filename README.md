@@ -281,6 +281,6 @@ _Table 5. Obtained accuracy and loss values from generated models._
 Accuracy rate is one of the objective criteria commonly used to determine the class discrimination ability of the classifier on the dataset in an experiment. According to the confusion matrix table in the literature; true positive (TP), false positive
 (FP), evaluated by true negative (TN) and false negative (FN) measurements, is given by Equation (1) below. This value can be shown both as a decimal and expanded as a percentage value in studies [25].
 
-Accuracy = \frac{TP+TN}{TP+TN+FP+FN} (1)
+<p text-align="center"> Accuracy = {TP+TN}{TP+TN+FP+FN} (1) </p>
 
 
