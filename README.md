@@ -281,6 +281,49 @@ _Table 5. Obtained accuracy and loss values from generated models._
 Accuracy rate is one of the objective criteria commonly used to determine the class discrimination ability of the classifier on the dataset in an experiment. According to the confusion matrix table in the literature; true positive (TP), false positive
 (FP), evaluated by true negative (TN) and false negative (FN) measurements, is given by Equation (1) below. This value can be shown both as a decimal and expanded as a percentage value in studies [25].
 
-<p text-align="center"> Accuracy = {TP+TN}{TP+TN+FP+FN} (1) </p>
+<p align="center"> Accuracy = {TP+TN}{TP+TN+FP+FN} (1) </p>
 
+The loss value obtained in the experiments is useful in following the changes in the objective function of the relevant deep neural network model during the training epoch and in understanding the quality of the training at the end of the training. In Table 6, a comparison of the experimental results of the model named "Design6" in this study with the similar studies in this field in the literature is given.
 
+_Table 6. Competing for success with studies in the literature._
+
+<table>
+  <tr>
+    <th  colspan="3"> Obtained Results from Experiments </th>
+  </tr>
+  <tr>
+    <th> Model </th>
+    <th> Used Structure & Feature </th>
+    <th> Accuracy Rate </th>
+  </tr>
+  <tr>
+    <td> Khampdaria [4] </td>
+    <td> log-mel, TDSN </td>
+    <td> 56% </td>
+  </tr>
+  <tr>
+    <td> Khampdaria [4] </td>
+    <td> log-mel, CNN </td>
+    <td> 77% </td>
+  </tr>
+  <tr>
+    <td> Piczak [2] </td>
+    <td> log-mel, CNN </td>
+    <td> 81,5% </td>
+  </tr>
+  <tr>
+    <td> RawNet [3] </td>
+    <td> raw waveform, CNN </td>
+    <td> 85,2% </td>
+  </tr>
+  <tr>
+    <td> AlexNet [5] </td>
+    <td> log-mel, MFCC, CRP, CRNN </td>
+    <td> 86% </td>
+  </tr>
+  <tr>
+    <td> Our Work (Design6) </td>
+    <td> log-mel, Multiple Masking, CNN </td>
+    <td> 87% </td>
+  </tr>
+  </table>
