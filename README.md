@@ -50,39 +50,26 @@ In order to create the structures and models designed in our study, ten sound ca
 
 The dataset was converted into a spectrogram using the method available in the Librosa [8] library to create a spectrogram. Then, the dataset for this model is exceptionally divided into 70% training, 20% validation and 10% testing. The design is as follows, on the layer structure of the pre-trained "MobileNetV2" [14] neural network model, a two-dimensional GlobalAveragePooling2D layer is added. Afterwards, a 512-unit Hidden Layer was created. Dropout has been performed and a ten-unit Output Layer has been created. In our study, this model seen in Table 1 was named "Design1".
 
-table, td, th {
-  border: 1px solid black;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td {
-  text-align: center;
-}
-
 _Table 1. The architectural structure of the first design created._
 
 <table>
   <tr>
-    <th> MobileNetV2 ve Convolutional Structure </th>
+    <th text-align: center;> MobileNetV2 ve Convolutional Structure </th>
   </tr>
   <tr>
-    <td> MobileNetV2 </td>
+    <td text-align: center;> MobileNetV2 </td>
   </tr>
   <tr>
-    <td> GlobalAveragePooling2D </td>
+    <td text-align: center;> GlobalAveragePooling2D </td>
   </tr>
   <tr>
-    <td> 512-unit Hidden Layer-ReLU </td>
+    <td text-align: center;> 512-unit Hidden Layer-ReLU </td>
   </tr>
   <tr>
-    <td> Dropout 0.5 </td>
+    <td text-align: center;> Dropout 0.5 </td>
   </tr>
   <tr>
-    <td> 10 Dense-Softmax </td>
+    <td text-align: center;> 10 Dense-Softmax </td>
   </tr>
 </table>
 
