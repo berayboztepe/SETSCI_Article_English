@@ -1,7 +1,6 @@
 # SETSCI Article English: This is the translation of our Turkish language published article to English language.
 
 
-
 <h1 align="center">Development of a Deep Learning Based Model for Recognizing the Environmental Sounds in Videos</h1>
 
 **Abstract** — Nowadays, decomposition of various environmental sounds for environment recognition has gained popularity.
@@ -50,6 +49,21 @@ In order to create the structures and models designed in our study, ten sound ca
 <p align="center"> <strong> V. Used Libraries and Environment for Developing the Model </strong> </p>
 
 The dataset was converted into a spectrogram using the method available in the Librosa [8] library to create a spectrogram. Then, the dataset for this model is exceptionally divided into 70% training, 20% validation and 10% testing. The design is as follows, on the layer structure of the pre-trained "MobileNetV2" [14] neural network model, a two-dimensional GlobalAveragePooling2D layer is added. Afterwards, a 512-unit Hidden Layer was created. Dropout has been performed and a ten-unit Output Layer has been created. In our study, this model seen in Table 1 was named "Design1".
+
+<style>
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+</style>
 
 _Table 1. The architectural structure of the first design created._
 
@@ -228,4 +242,13 @@ _Table 4. Creating an RNN model on the model created with VGG19 and examining di
   </table>
 
 <p align="center"> <strong> XIII. Experimental Results </strong> </p>
+
+When the results of the experiments are examined, the model with the highest test accuracy and the lowest loss value is the model created using eight Convolutional Layers and without using GRU. As can be seen from Table 5, an accuracy rate of 87% and a loss of 0.88 were obtained as a percentage in the test results with the best model, "Design6". This shows that the model has an acceptable success. Each model created is a change that has been created or made on the previous model to improve the results obtained in previous models.
+
+_Table 5. Obtained accuracy and loss values from generated models._
+
+
+
+
+
 
