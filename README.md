@@ -46,6 +46,8 @@ In order to create the structures and models designed in our study, ten sound ca
 <img src="img/image2.png">
 </p>
 
+_Figure 1. An audio sample from the category of “Chirping birds” (a) and created spectrogram by adding Guassian Noise to this audio (b)._
+
 <p align="center"> <strong> V. Used Libraries and Environment for Developing the Model </strong> </p>
 
 The dataset was converted into a spectrogram using the method available in the Librosa [8] library to create a spectrogram. Then, the dataset for this model is exceptionally divided into 70% training, 20% validation and 10% testing. The design is as follows, on the layer structure of the pre-trained "MobileNetV2" [14] neural network model, a two-dimensional GlobalAveragePooling2D layer is added. Afterwards, a 512-unit Hidden Layer was created. Dropout has been performed and a ten-unit Output Layer has been created. In our study, this model seen in Table 1 was named "Design1".
@@ -92,6 +94,8 @@ In order to increase the data in the dataset, spectrogram was taken with the hel
 <p align="center">
 <img src="img/image3.png">
 </p>
+ 
+_Figure 2. Explanation of Multiple Masking process by an audio from “Airplane” category and an audio from “Chainsaw” category. First images denote the normal spectrograms. The second images denote Frequency and Time masks and the last image denotes Mixed Spectrogram._
  
 <p align="center"> <strong> X. Data Given to the Programatically Created Model </strong> </p>
 
