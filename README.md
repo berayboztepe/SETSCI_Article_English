@@ -51,6 +51,8 @@ In order to create the structures and models designed in our study, ten sound ca
 
 The dataset was converted into a spectrogram using the method available in the Librosa [8] library to create a spectrogram. Then, the dataset for this model is exceptionally divided into 70% training, 20% validation and 10% testing. The design is as follows, on the layer structure of the pre-trained "MobileNetV2" [14] neural network model, a two-dimensional GlobalAveragePooling2D layer is added. Afterwards, a 512-unit Hidden Layer was created. Dropout has been performed and a ten-unit Output Layer has been created. In our study, this model seen in Table 1 was named "Design1".
 
+_Table 1. The architectural structure of the first design created._
+
 <table>
   <tr>
     <th> MobileNetV2 ve Convolutional Structure </th>
@@ -94,6 +96,8 @@ In order to increase the data in the dataset, spectrogram was taken with the hel
 
 The programmatic implementation of the design model, which was developed based on the model [24] in a study in the literature, works as follows, thanks to its coding in Python language. First, a CNN model with four Convolutional Layers is created. Batch Normalization is done after each Convolutional Layer is created. A Pooling operation takes place in both Convolutional Layers. In the models in our study, the relevant activation processes are also performed using the Rectified Linear Unit (ReLU). After the last Pooling process, a model is created for two Gated Recurrent Units (KTB) with hyperbolic tangent (tanh) activation. After the Dropout process, the “Softmax” process is performed and the classification result is obtained. The dataset given to this programmatic structure is the same as the dataset mentioned in the previous section. In our study, this model seen in Table 2 was named "Design5".
 
+_Table 2. CNN and RNN design architecture built using four Convolutional Layers._
+
 <table>
   <tr>
     <th> Convolutional RNN </th>
@@ -123,7 +127,105 @@ The programmatic implementation of the design model, which was developed based o
     <td> 256 GRU2-tanh-Dropout 0.5 </td>
   </tr>
   <tr>
-    <td> 10 Dense- Softmax </td>
+    <td> 10 Fully Connected Layer - Softmax </td>
   </tr>
 </table>
+
+<p align="center"> <strong> XI. Increasing the Number of Convolutional Layers in the New Design </strong> </p>
+
+In the programmatic design, the number of Convolutional Layers has been increased to eight by arranging the four-layer code. The model was trained with a fifty training epoch. It has been decided not to use GRU layers because the result is worse when GRU layers are added. In our study, this model seen in Table 3 was named "Design6".
+
+_Table 3. CNN and RNN main design architecture (before removing the GRU layers) built using eight Convolutional Layers._
+
+<table>
+  <tr>
+    <th> Convolutional RNN </th>
+  </tr>
+  <tr>
+    <td> 3x5x32 Convolutional1-Batch Normalization-ReLU </td>
+  </tr>
+  <tr>
+    <td> 3x5x32 Convolutional2-Batch Normalization-ReLU </td>
+  </tr>
+  <tr>
+    <td> 4x3 MaxPooling </td>
+  </tr>
+  <tr>
+    <td> 3x1x64 Convolutional3-Batch Normalization-ReLU </td>
+  </tr>
+  <tr>
+    <td> 3x1x64 Convolutional4-Batch Normalization-ReLU </td>
+  </tr>
+  <tr>
+    <td> 4x1 MaxPooling </td>
+  </tr>
+  <tr>
+    <td> 1x5x128 Convolutional5-Batch Normalization-ReLU </td>
+  </tr>
+  <tr>
+    <td> 1x5x128 Convolutional6-Batch Normalization-ReLU </td>
+  </tr>
+  <tr>
+    <td> 1x3 MaxPooling </td>
+  </tr>
+  <tr>
+    <td> 3x3x256 Convolutional7-Batch Normalization-ReLU </td>
+  </tr>
+  <tr>
+    <td> 3x3x256 Convolutional8-Batch Normalization-ReLU </td>
+  </tr>
+  <tr>
+    <td> 2x2 MaxPooling </td>
+  </tr>
+  <tr>
+    <td> 256 GRU1-tanh-Dropout 0.5 </td>
+  </tr>
+  <tr>
+    <td> 256 GRU2-tanh-Dropout 0.5 </td>
+  </tr>
+  <tr>
+    <td> 10 Fully Connected Layer - Softmax </td>
+  </tr>
+</table>
+
+<p align="center"> <strong> XII. Obtained Model With Using VGG19 and RNN </strong> </p>
+
+It is given to RNN with (LSTM) layers. Then the attention process is applied. The Permute process and the 128-unit Dense creation part in the coding architecture of the design were created within the framework of this attention event. Finally, the result of the inputs to the Dense Layers created with the "Softmax" function comes out in the Fully Connected Layer. The model is trained with the data given to the implementation of the programmatic design created with this logic. In our study, this model seen in Table 4 was named "Design7".
+
+_Table 4. Creating an RNN model on the model created with VGG19 and examining different points of the inputs to this model with the attention event._
+
+<table>
+  <tr>
+    <th> VGG19 & RNN </th>
+  </tr>
+  <tr>
+    <td> VGG19 </td>
+  </tr>
+  <tr>
+    <td> 128x384 Input </td>
+  </tr>
+  <tr>
+    <td> 256 Bi-LSTM </td>
+  </tr>
+  <tr>
+    <td> 2x1 Permute </td>
+  </tr>
+  <tr>
+    <td> 128-unit Dense ReLU </td>
+  </tr>
+  <tr>
+    <td> Flatten </td>
+  </tr>
+  <tr>
+    <td> 512-unit Dense ReLU </td>
+  </tr>
+  <tr>
+    <td> Dropout 0.5 </td>
+  </tr>
+  <tr>
+    <td> 10 Fully Connected Layer - Softmax </td>
+  </tr>
+  </table>
+
+<p align="center"> <strong> XIII. Experimental Results </strong> </p>
 
