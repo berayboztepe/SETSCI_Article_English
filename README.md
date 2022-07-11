@@ -1,5 +1,3 @@
-# SETSCI Article English: This is the translation of our Turkish language published article to English language.
-
 
 <h1 align="center">Development of a Deep Learning Based Model for Recognizing the Environmental Sounds in Videos</h1>
 
