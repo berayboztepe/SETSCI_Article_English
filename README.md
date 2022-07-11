@@ -50,7 +50,6 @@ In order to create the structures and models designed in our study, ten sound ca
 
 The dataset was converted into a spectrogram using the method available in the Librosa [8] library to create a spectrogram. Then, the dataset for this model is exceptionally divided into 70% training, 20% validation and 10% testing. The design is as follows, on the layer structure of the pre-trained "MobileNetV2" [14] neural network model, a two-dimensional GlobalAveragePooling2D layer is added. Afterwards, a 512-unit Hidden Layer was created. Dropout has been performed and a ten-unit Output Layer has been created. In our study, this model seen in Table 1 was named "Design1".
 
-<style>
 table, td, th {
   border: 1px solid black;
 }
@@ -63,7 +62,6 @@ table {
 td {
   text-align: center;
 }
-</style>
 
 _Table 1. The architectural structure of the first design created._
 
