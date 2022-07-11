@@ -233,10 +233,8 @@ When the results of the experiments are examined, the model with the highest tes
 _Table 5. Obtained accuracy and loss values from generated models._
 
 <table>
-  <tr rowspan="2">
-    <th> Model </th>
-  </tr>
   <tr>
+    <th  rowspan="2"> Model </th>
     <th> Obtained Results from Experiments </th>
   </tr>
   </table>
