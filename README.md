@@ -54,22 +54,22 @@ _Table 1. The architectural structure of the first design created._
 
 <table>
   <tr>
-    <th text-align: center;> MobileNetV2 ve Convolutional Structure </th>
+    <th> MobileNetV2 ve Convolutional Structure </th>
   </tr>
   <tr>
-    <td text-align: center;> MobileNetV2 </td>
+    <td> MobileNetV2 </td>
   </tr>
   <tr>
-    <td text-align: center;> GlobalAveragePooling2D </td>
+    <td> GlobalAveragePooling2D </td>
   </tr>
   <tr>
-    <td text-align: center;> 512-unit Hidden Layer-ReLU </td>
+    <td> 512-unit Hidden Layer-ReLU </td>
   </tr>
   <tr>
-    <td text-align: center;> Dropout 0.5 </td>
+    <td> Dropout 0.5 </td>
   </tr>
   <tr>
-    <td text-align: center;> 10 Dense-Softmax </td>
+    <td> 10 Dense-Softmax </td>
   </tr>
 </table>
 
@@ -232,7 +232,14 @@ When the results of the experiments are examined, the model with the highest tes
 
 _Table 5. Obtained accuracy and loss values from generated models._
 
-
+<table>
+  <tr rowspan="2">
+    <th> Model </th>
+  </tr>
+  <tr>
+    <th> Obtained Results from Experiments </th>
+  </tr>
+  </table>
 
 
 
