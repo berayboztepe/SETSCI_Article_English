@@ -39,14 +39,36 @@ contains obtained experimental results and scientific evaluation.
   
 <p align="center"> <strong> III. Dataset </strong> </p>
 
+In order to create the structures and models designed in our study, ten sound categories were used from the dataset containing a total of fifty sound classes consisting of five main subject categories and including environmental sounds [10]. These categories are: Animals, Natural soundscapes & water sounds, Human, non-speech sounds, Interior/Domestic sounds, Exterior/Urban noises categories. Each of these categories has a total of 10 sound classes. Sounds in these categories are: “Chirping birds”, “Thunderstorm”, “Breathing”, “Brushing teeth”, “Can opening”, “Clock tick”, “Chainsaw”, “Car horn”, “Church bells”, “Airplane” . For each sound, there are forty different sound samples. The length of these audio recordings is about five seconds. Background sound was added to the available sounds to increase the dataset. This background sound is an audio track containing one minute of white noise. A 5000 ms segment was taken from this background sound to be added to the five-second sounds at hand. Later, this section was integrated into the sounds. In this way, the data size in the data set is doubled. The modified dataset obtained here is used as the basic dataset of the model. In addition, according to the model to be established, methods such as MFCC type feature acquisition method, Chroma [7] type feature acquisition method, Multiple Masking [11] are applied on this basic dataset to increase the variety of features to be obtained from the dataset. In general, the dataset in our study are divided 80% training, 10% validation, 10% testing.
 
+<p align="center"> <strong> IV. Used Libraries and Environment for Developing the Model </strong> </p>
 
+  Keras [12] library was used to create all deep learning models. In addition, pre-trained ResNet50 [13], MobileNetV2 [14], VGG16 and VGG19 [15] models, which are ready in the Keras library and used as the base model of the given model, were used. The creation of the model is based on the spectrogram of the available audio recording with the help of both the Librosa [8] and Tensorflow [16] libraries. These spectrograms were created by taking log-mel properties. Then, with the help of these libraries, data augmentation was provided programmatically for the available data set. The SoundNet [17], [18] library, which provides direct decomposition of sounds over the given input video, has also been tested. With the help of the Matplotlib [19] library, the generated spectrograms were turned into a graph. Also Numpy [19], Pandas [19], OS [19] etc. libraries were also used. During the trainings and tests, one of them is Intel Core i7-8750H processor with 16 GB RAM memory, running at 2.20 GHz, Nvidia GeForce GTX 1060 graphics card hardware features, and the other is Intel Core i7-9750H processor with 8 GB RAM memory, running at 2.6 GHz and Two different laptop computers with Nvidia GeForce GTX 1650 graphics card hardware features were used. Figure 1 shows some examples of spectrograms used in our study.
 
+<p align="center"> <strong> V. Used Libraries and Environment for Developing the Model </strong> </p>
 
+The dataset was converted into a spectrogram using the method available in the Librosa [8] library to create a spectrogram. Then, the dataset for this model is exceptionally divided into 70% training, 20% validation and 10% testing. The design is as follows, on the layer structure of the pre-trained "MobileNetV2" [14] neural network model, a two-dimensional GlobalAveragePooling2D layer is added. Afterwards, a 512-unit Hidden Layer was created. Dropout has been performed and a ten-unit Output Layer has been created. In our study, this model seen in Table 1 was named "Design1".
 
-
-
-
+<table>
+  <tr>
+    <th> MobileNetV2 ve Convolutional Structure </th>
+  </tr>
+  <tr>
+    <td> MobileNetV2 </td>
+  </tr>
+  <tr>
+    <td> GlobalAveragePooling2D </td>
+  </tr>
+  <tr>
+    <td> 512-unit Hidden Layer-ReLU </td>
+  </tr>
+  <tr>
+    <td> Dropout 0.5 </td>
+  </tr>
+  <tr>
+    <td> 10 Dense-Softmax </td>
+  </tr>
+</table>
 
 
 
